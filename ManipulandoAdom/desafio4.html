@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <input type="text" name="nome">
+        <button onClick="adicionar()">Adicionar</button>
+    </ul>
+</body>
+<script>
+/*Seguindo o resultado do exercício anterior adicione um input em tela e um botão como a seguir:
+<input type="text" name="nome">
+<button onClick="adicionar()">Adicionar</button>
+Ao clicar no botão, a função adicionar() deve ser disparada adicionando um novo item a lista de
+nomes baseado no nome preenchido no input e renderizando o novo item em tela juntos aos
+demais itens anteriores. Além disso, o conteúdo do input deve ser apagado após o clique.
+*/
+var nomes = ["Diego", "Gabriel", "Lucas"]
+var lista = document.querySelector('ul')
+var input = document.querySelector('input')
+
+function adicionarItem(texto) {
+    var liElment = document.createElement('li')
+    var textElement = document.createTextNode(texto)
+
+    liElment.appendChild(textElement)
+    lista.appendChild(liElment)
+}
+
+adicionar = () => {
+    adicionarItem(input.value)
+    input.value = "" // limpa o campo imput
+}
+
+
+
+    nomes.forEach(nome => {
+      adicionarItem(nome)
+})
+
+
+</script>
+</html>

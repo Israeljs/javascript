@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso de Javascript - Desafio</title>
+</head>
+<body>
+    <div id="desafio">
+        <button class="botao" onclick="onClique()">Criar Quadrado</button>
+        
+    </div>
+    
+</body>
+<script>
+    //Não precisa adicionar no botão o evento nem chamar a função
+
+    var butao = document.querySelector('button.botao')
+
+    butao.addEventListener("click",el => {
+        console.log("aqui")
+        let quadrado = document.createElement("div")
+        quadrado.style.height = '500px';//não precisa por o px(ou não)
+        quadrado.style.width = '500px';
+        quadrado.style.backgroundColor = '#f00'; //camel case em vez de background-color
+        var divMae = document.querySelector('#desafio')
+        divMae.appendChild(quadrado)
+    })
+    let onClique = () => { 
+        //Precisa adicionar no botão o evento e chamar a função
+
+        /*let quadrado = document.createElement("div")
+        quadrado.style.height = '100px';//não precisa por o px(ou não)
+        quadrado.style.width = '100px';
+        quadrado.style.backgroundColor = '#f00'; //camel case em vez de background-color
+        var divMae = document.querySelector('#desafio')
+        divMae.appendChild(quadrado)*/
+
+    }
+    
+
+</script>
+</html>

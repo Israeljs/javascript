@@ -1,0 +1,39 @@
+<!--como referenciar(buscar) elemantos html no javascript-->
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso Javascript</title>
+</head>
+<body>
+     <div id="app">
+       <!-- <input type="text" name="nome" id="nome" class="nome"> -->
+       <input type="text" name="nome">
+       <!-- <input type="text" name="nome2"> -->
+       <button class="botao">Adcionar</button>
+    </div> 
+
+    <script>
+        // var inputElement = document.getElementById('nome')
+        // var inputElement = document.getElementsByTagName('input')[0]//sempre retorna um vetor
+        // var inputElement = document.getElementsByClassName('nome')[0]//sempre retorna um vetor
+        // var inputElement = document.querySelector('div#app input')//se procurar só o input ele traria o primeiro. Já o selectorAll traria tudo
+        var inputElement = document.querySelector('input[name=nome]')//os colchetes referenciam uma propriedade do elemento pesquisado
+        var btnElement = document.querySelector('button.botao')
+
+        btnElement.onclick = function() {
+          var text = inputElement.value//recuperando o texto digitado
+
+          alert(text)
+          //alert('Botão clicado') 
+          // console.log(inputElement) 
+        }
+        
+
+        
+    </script>
+</body>
+</html>

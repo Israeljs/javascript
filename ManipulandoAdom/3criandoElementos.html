@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso Javascript</title>
+</head>
+<body>
+    <div id="app">
+        <!-- <input type="text" name="nome">
+        <button class="botao">Adicionar</button> -->
+        <input id="nome">
+    </div>
+    <script>
+        var linkElement = document.createElement('a')
+        linkElement.setAttribute('href', 'http://rocketseat.com.br')//pode ser assim linkElement.href = 
+        linkElement.setAttribute('title', 'Site da Rocketseat')
+        
+
+        var textElement = document.createTextNode('Acessar Site da Rocketseat')// incluindo um texto para o link
+        linkElement.appendChild(textElement)//posicionando o texto com o link(adicionando o 
+        //textElement como um filho do linkElement)
+        //como se fo<a href="http://rocketseat.com.br">Acessar Site da Rocketseat</a>
+
+        var containerElement = document.querySelector('#app')
+        containerElement.appendChild(linkElement)//colocando o link dentro do corpo
+
+        var inputElement = document.querySelector('#nome')
+        //selecionando um elemento atribuindo-o a uma variável
+        containerElement.removeChild(inputElement)//e removendo-o
+
+    </script>
+    
+</body>
+</html>

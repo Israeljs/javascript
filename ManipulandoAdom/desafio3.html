@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul></ul>
+</body>
+<script>
+/*A partir do seguinte vetor:
+var nomes = ["Diego", "Gabriel", "Lucas"];
+Preencha uma lista (<ul>) no HTML com os itens da seguinte forma:
+● Diego
+● Gabriel
+● Lucas
+*/
+
+var nomes = ["Diego", "Gabriel", "Lucas"]
+var listaElement = document.querySelector('ul')
+
+nomes.forEach(nome => {
+    var liElment = document.createElement('li')
+    var textElement = document.createTextNode(nome)
+    liElment.appendChild(textElement)
+    listaElement.appendChild(liElment)
+})
+
+/*for (nome of nomes){
+    var liElment = document.createElement('li')
+    var textElement = document.createTextNode(nome)
+    liElment.appendChild(textElement)
+    listaElement.appendChild(liElment)
+}*/
+
+</script>
+</html>
