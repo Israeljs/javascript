@@ -7,4 +7,5 @@ module.exports = (app) => {
   }));
 
   app.post('/api/todolist', tasksController.create);
+  app.get('/api/todolist', tasksController.findAll);
 };
